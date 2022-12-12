@@ -1,7 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Exemplo de uso de array!");
 
-MediaIdades();
+//MediaIdades();
+BuscarPalavra();
 
 void MediaIdades()
 {
@@ -32,6 +33,29 @@ void MediaIdades()
 
     int media = acumulador / idades.Length;
     Console.WriteLine($"Média de idade: {media}");
+}
+
+void BuscarPalavra()
+{
+    string[] arrayDePalavras = new string[5];
+
+    for (int i = 0; i < arrayDePalavras.Length; i++)
+    {
+        Console.Write($"Digite {i+1} a Palavra: ");
+        arrayDePalavras[i] = Console.ReadLine();
+    }
+    Console.Write("Digite a palavra a ser encontrada: ");
+    var busca = Console.ReadLine();
+
+    foreach (var item in arrayDePalavras)
+    {
+        if (item.Equals(busca))
+        {
+            Console.WriteLine($"Palavra encontrada = {busca}");
+            break;
+        }
+
+    }
 }
 
 
